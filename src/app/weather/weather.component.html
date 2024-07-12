@@ -2,18 +2,16 @@
   <div class="box">
     <form #form="ngForm" (submit)="onSubmit()">
       <input type="text" class="search" placeholder={{cityname}} name="city" [(ngModel)]="city">
+      <button type="submit" class="btn custom-btn" (submit)="onSubmit()" style="background-color: revert;
+      border: 2px solid yellowgreen;
+      margin: 10px;">Search</button>
     </form>
   </div>
 
-  <div class="container" id="wrapper">
-    <div class="container-fluid" id="current-weather">
+  <div class="" id="wrapper">
+    <div class="" id="current-weather">
       <div class="row">
-        <!-- Right panel -->
-        <!-- <div class="col-xs-6 col-sm-6 col-md-4 row" style="text-align: right;">
-          <img src="../assets/w3.png" class="img2" height="100px">
-        </div> -->
-        <!-- Center panel -->
-        <div class="col-md-8 col-sm-7" style="margin: 10px auto;padding:0;">
+        <div class="col-md-8 col-sm-7" >
           <div class="row">
             <h4>{{getCurrentDateTime()}} </h4>
             <span>
@@ -24,7 +22,6 @@
           </div>
         </div>
 
-        <!-- Left panel -->
         <div class="col-xs-12 col-sm-12 col-md-4 row" style="text-align: right;">
           <div class="col-md-12 col-sm-3 col-xs-3 side-weather-info">
             <h5>Humidity: <span id="humidity"></span>{{humidity}}%</h5>
@@ -42,45 +39,28 @@
 
       </div>
     </div>
-
-    <!-- 4 days forecast -->
     <div class="forecastd">
       <div class="container-fluid">
         <div class="row" style="padding: 2px;">
           <div class="nxtday">
-            <!-- Day 1 -->
             <div class="col-md-6 col-sm-6 day-weather-box">
               <p id="forecast-day-1-name">&nbsp;{{foredate2}}</p>
               <div class="row">
                 <h5 id="forecast-day-1-main">{{day2}}°&nbsp;&nbsp;</h5>
               </div>
             </div>
-            <!-- Day 2 -->
             <div class="col-md-6 col-sm-6 day-weather-box">
               <p id="forecast-day-2-name">&nbsp;{{foredate3}}</p>
               <div class="row">
                 <h5 id="forecast-day-2-main">{{day3}}°&nbsp;&nbsp;</h5>
               </div>
             </div>
-            <!-- Day 3 -->
             <div class="col-md-6 col-sm-6 day-weather-box">
               <p id="forecast-day-3-name">&nbsp;{{foredate4}}</p>
               <div class="row">
                 <h5 id="forecast-day-3-main">{{day4}}°&nbsp;&nbsp;</h5>
               </div>
-              <!-- <div class="date">
-                {{foredate4}}
-              </div>
-              <div class="temp">
-                {{day4}}
-              </div>
-              <div class="extra">
-                <img src="../assets/w3.png" alt="">
-                  <img src="../assets/w3.png" alt="">
-
-              </div> -->
             </div>
-            <!-- Day 4 -->
             <div class="col-md-6 col-sm-6 day-weather-box">
               <p id="forecast-day-4-name">&nbsp;{{foredate5}}</p>
               <div class="row">
@@ -93,10 +73,4 @@
     </div>
   </div>
 </div>
-<!-- //////////////////////////////////////////////////////////////////////////////////////////// -->
-<router-outlet>
 
-</router-outlet>
-<!-- <div class="desktop">
-  <img src="../assets/bg.jpg">
-</div> -->
